@@ -2,14 +2,22 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>房地产评估报告</title>
     <style>
+        :root {
+            --primary-color: #3498db;
+            --text-color: #2c3e50;
+            --highlight-color: #e74c3c;
+        }
+
         body {
-            font-family: 'Microsoft YaHei', sans-serif;
+            font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif;
             line-height: 1.6;
             margin: 40px;
             background-color: #f5f5f5;
+            color: var(--text-color);
         }
 
         .report-card {
@@ -19,20 +27,23 @@
             box-shadow: 0 2px 15px rgba(0,0,0,0.1);
             max-width: 800px;
             margin: 0 auto;
+            box-sizing: border-box;
         }
 
         h1 {
-            color: #2c3e50;
+            color: var(--primary-color);
             text-align: center;
-            border-bottom: 2px solid #3498db;
+            border-bottom: 2px solid var(--primary-color);
             padding-bottom: 15px;
             margin-bottom: 30px;
+            font-size: 2.2em;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
             margin-bottom: 25px;
+            font-size: 1rem;
         }
 
         th {
@@ -46,6 +57,7 @@
         td {
             padding: 12px;
             border-bottom: 1px solid #ecf0f1;
+            vertical-align: top;
         }
 
         tr:last-child td {
@@ -53,8 +65,9 @@
         }
 
         .highlight {
-            color: #e74c3c;
-            font-weight: bold;
+            color: var(--highlight-color);
+            font-weight: 600;
+            font-size: 1.1em;
         }
 
         .contact-info {
@@ -62,11 +75,27 @@
             padding: 15px;
             border-radius: 5px;
             margin-top: 20px;
+            font-size: 0.9em;
         }
 
         .no-data {
             color: #95a5a6;
             font-style: italic;
+            font-size: 0.95em;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                margin: 20px;
+            }
+            
+            .report-card {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
         }
     </style>
 </head>
@@ -81,7 +110,7 @@
             </tr>
             <tr>
                 <th>评估单价</th>
-                <td class="highlight">¥39,800.00</td>
+                <td class="highlight">¥39,800.00/平方米</td>
             </tr>
             <tr>
                 <th>建筑面积</th>
@@ -103,8 +132,10 @@
 
         <div class="contact-info">
             <p><strong>防伪验证信息：</strong></p>
-            <p>联系人：邓湘</p>
-            <p>联系电话：<a href="tel:4006236336" style="color: #3498db;">400-623-6336</a></p>
+            <p>评估机构：XX房地产评估有限公司</p>
+            <p>评估师：邓湘</p>
+            <p>联系电话：<span class="highlight">400-623-6336</span></p>
+            <p>验证日期：2025年04月22日</p>
         </div>
     </div>
 </body>
