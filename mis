@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>房地产评估报告</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            background-color: #f5f5f5;
+        }
+
+        .report-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+        }
+
+        th {
+            background-color: #ecf0f1;
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            border-bottom: 2px solid #bdc3c7;
+        }
+
+        td {
+            padding: 12px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .highlight {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .contact-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .no-data {
+            color: #95a5a6;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <div class="report-card">
+        <h1>房地产评估报告</h1>
+
+        <table>
+            <tr>
+                <th>物业名称</th>
+                <td>时代景苑5-8栋5座9F</td>
+            </tr>
+            <tr>
+                <th>评估单价</th>
+                <td class="highlight">¥39,800.00</td>
+            </tr>
+            <tr>
+                <th>建筑面积</th>
+                <td>78.11 平方米</td>
+            </tr>
+            <tr>
+                <th>评估总值</th>
+                <td class="highlight">¥3,108,778.00</td>
+            </tr>
+            <tr>
+                <th>建筑面积合计</th>
+                <td>78.11 平方米</td>
+            </tr>
+            <tr>
+                <th>土地面积</th>
+                <td><span class="no-data">-</span></td>
+            </tr>
+        </table>
+
+        <div class="contact-info">
+            <p><strong>防伪验证信息：</strong></p>
+            <p>联系人：邓湘</p>
+            <p>联系电话：<a href="tel:4006236336" style="color: #3498db;">400-623-6336</a></p>
+        </div>
+    </div>
+</body>
+</html>
